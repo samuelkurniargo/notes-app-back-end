@@ -38,7 +38,7 @@ class NotesHandler {
         return response;
       }
 
-      //Server Error!
+      // Server Error!
       const response = h.response({
         status: 'error',
         message: 'Maaf, terjadi kegagalan pada server kami.',
@@ -79,7 +79,7 @@ class NotesHandler {
         return response;
       }
 
-      //Server Error!
+      // Server Error!
       const response = h.response({
         status: 'error',
         message: 'Maaf, terjadi kegagalan pada server kami.',
@@ -93,7 +93,7 @@ class NotesHandler {
   async putNoteByIdHandler(request, h) {
     try {
       this._validator.validateNotePayload(request.payload);
-      const { title, body, tags } = request.payload; 
+      const { title, body, tags } = request.payload;
       const { id } = request.params;
 
       await this._service.editNoteById(id, { title, body, tags });
@@ -112,7 +112,7 @@ class NotesHandler {
         return response;
       }
 
-      //Server Error!
+      // Server Error!
       const response = h.response({
         status: 'error',
         message: 'Maaf, terjadi kegagalan pada server kami.',
@@ -142,7 +142,7 @@ class NotesHandler {
         return response;
       }
 
-      //Server Error!
+      // Server Error!
       const response = h.response({
         status: 'error',
         message: 'Maaf, terjadi kegagalan pada server kami.',
